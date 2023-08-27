@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Challenge - Encriptador de Texto ONE</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="container">
+    <h1>Challenge - Encriptador de Texto ONE</h1>
+    <div class="text-input">
+      <span id="text-encrypt-label">Ingrese el texto aqui</span>
+      <textarea class="text-encrypt" id="text-encrypt" aria-labelledby="text-encrypt-label"></textarea>
+      <p>Solo letras minusculas y sin acentos</p>
+      <button type="button" id="btn-encrypt" class="btn-encrypt">Encriptar</button>
+      <button type="button" id="btn-decrypt" class="btn-decrypt">Desencriptar</button>
+    </div>
+    <div class="text-output">
+      <h2>Ningun mensaje fue encontrado</h2>
+      <p>Ingresa el texto que deseas encriptar o desencriptar</p>
+      <p id="text-encrypted"></p>
+    </div>
+  </div>
+  <script defer src="js/main.min.js"></script>
+</body>
+
+</html>
