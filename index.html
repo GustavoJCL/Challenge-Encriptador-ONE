@@ -12,19 +12,20 @@
   <div id="container">
     <h1>Challenge - Encriptador de Texto ONE</h1>
     <div class="text-input">
-      <span id="text-encrypt-label">Ingrese el texto aqui</span>
-      <textarea class="text-encrypt" id="text-encrypt" aria-labelledby="text-encrypt-label"></textarea>
-      <p>Solo letras minusculas y sin acentos</p>
+      <!-- <span id="text-encrypt-label">Ingrese el texto aqui</span> -->
+      <textarea class="text-input" id="text-input" aria-labelledby="text-encrypt-label"
+        placeholder="Ingrese el texto aqui"></textarea>
+      <p id="alert-message">Solo letras minusculas y sin acentos</p>
       <button type="button" id="btn-encrypt" class="btn-encrypt">Encriptar</button>
       <button type="button" id="btn-decrypt" class="btn-decrypt">Desencriptar</button>
     </div>
     <div class="text-output">
       <h2>Ningun mensaje fue encontrado</h2>
       <p>Ingresa el texto que deseas encriptar o desencriptar</p>
-      <p id="text-encrypted"></p>
+      <p id="text-result"></p>
     </div>
   </div>
-  <script defer src="js/main.min.js"></script>
+  <script defer src="js/main.js"></script>
 </body>
 
 </html>
