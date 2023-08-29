@@ -1,0 +1,109 @@
+body{
+  background: var(--light-blue-light-blue-100, #F3F5FC);
+}
+
+.rectangle{
+  width: 400px;
+  height: 944px;
+  flex-shrink: 0;
+  border-radius: 32px;
+  background: var(--white, #FFF);
+
+  /* shadow */
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+.img-múneco{
+  width: 304px;
+  height: 336px;
+  flex-shrink: 0;
+}
+.text-output{
+  display: flex;
+  width: 336px;
+  flex-direction: column;
+  align-items:center;
+  gap: 16px;
+}
+.text-output-title{
+  align-self: stretch;
+  color: var(--gray-gray-500, #343A40);
+  text-align: center;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 28.8px */
+}
+.text-output-text{
+  align-self: stretch;
+  color: var(--gray-gray-400, #495057);
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+.logo{
+  width: 120px;
+  height: 48px;
+  flex-shrink: 0;
+}
+.text-input{
+  width: 577px;
+  color: var(--dark-blue-dark-blue-300, #0A3871);
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 48px */
+}
+.alert.message{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn-container{
+  display: flex;
+  width: 680px;
+  align-items: flex-start;
+  gap: 24px;
+}
+.btn-encrypt{
+  display: flex;
+  width: 328px;
+  padding: 24px;
+  align-items: flex-start;
+  gap: 8px;
+  flex-shrink: 0;
+  border-radius: 24px;
+  background: var(--dark-blue-dark-blue-300, #0A3871);
+  flex: 1 0 0;
+  color: var(--white, #FFF);
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.btn-decrypt{
+  display: flex;
+  width: 328px;
+  padding: 24px;
+  align-items: flex-start;
+  gap: 8px;
+  flex-shrink: 0;
+  border-radius: 24px;
+  border: 1px solid var(--dark-blue-dark-blue-300, #0A3871);
+  background: #D8DFE8;
+  flex: 1 0 0;
+  color: var(--dark-blue-dark-blue-300, #0A3871);
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+

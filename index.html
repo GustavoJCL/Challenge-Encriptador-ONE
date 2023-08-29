@@ -9,23 +9,34 @@
 </head>
 
 <body>
-  <div id="container">
-    <h1>Challenge - Encriptador de Texto ONE</h1>
+  <div id="container" class="container">
+    <img src="img/logo.svg" alt="" class="logo" id="logo" height="48" width="120" decoding="async">
+    <h1 class="title">Challenge - Encriptador de Texto</h1>
     <div class="text-input">
-      <!-- <span id="text-encrypt-label">Ingrese el texto aqui</span> -->
-      <textarea class="text-input" id="text-input" aria-labelledby="text-encrypt-label"
-        placeholder="Ingrese el texto aqui"></textarea>
-      <p id="alert-message">Solo letras minusculas y sin acentos</p>
-      <button type="button" id="btn-encrypt" class="btn-encrypt">Encriptar</button>
-      <button type="button" id="btn-decrypt" class="btn-decrypt">Desencriptar</button>
+      <!-- <label for="text-input">Ingrese el texto aqui</label> -->
+      <textarea class="text-input" id="text-input" placeholder="Ingrese el texto aqui"
+        aria-label="Ingrese el texto aqui"></textarea>
+      <p id="alert-message">
+        <img src="img/bi_exclamation-circle-fill.svg" alt="" width="16" height="16" decoding="async">
+        Solo letras minusculas y sin acentos
+      </p>
+      <div class="btn-container">
+        <button type="button" id="btn-encrypt" class="btn-encrypt">Encriptar</button>
+        <button type="button" id="btn-decrypt" class="btn-decrypt">Desencriptar</button>
+      </div>
+      <div class="rectangle">
+        <img src="img/muñeco.svg" alt="img-muñeco" class="img-muñeco" id="img-muñeco" decoding="async" width="304"
+          height="336">
+        <div class="text-output" id="text-output">
+          <p class="text-output-title">Ningun mensaje fue encontrado</p>
+          <p class="text-output-text">Ingresa el texto que deseas encriptar o desencriptar</p>
+        </div>
+        <p id="text-result"></p>
+        <button type="button" id="btn-copy" class="btn-copy">Copiar</button>
+      </div>
+
     </div>
-    <div class="text-output">
-      <h2>Ningun mensaje fue encontrado</h2>
-      <p>Ingresa el texto que deseas encriptar o desencriptar</p>
-      <p id="text-result"></p>
-    </div>
-  </div>
-  <script defer src="js/main.js"></script>
+    <script defer src="js/main.js"></script>
 </body>
 
 </html>

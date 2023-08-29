@@ -11,21 +11,36 @@ const btnAreaDecrypt = document.getElementById("btn-decrypt");
 const textAreaResult = document.getElementById("text-result");
 const textAreaInput = document.getElementById("text-input");
 const alertMessage = document.getElementById("alert-message");
+const textOutput = document.getElementById("text-output");
+const btnCopy = document.getElementById("btn-copy");
 
 btnAreaEnctypt.addEventListener("click", () => {
-	const encryptedText = textAreaInput.value.map((letter) => {
-		return encryptKey[letter] || letter;
-	});
-	textAreaResult.value = encryptedText;
+	// console.log(textAreaInput.value);
+	const encryptedText = textAreaInput.value
+		.split("")
+		.map((letter) => {
+			return encryptKey[letter] || letter;
+		})
+		.join("");
+	// console.log(textAreaResult);
+	textOutput.style.display = "none";
+	btnCopy.style.display = "block";
+	textAreaResult.innerText = encryptedText;
 });
 
 btnAreaDecrypt.addEventListener("click", () => {
-	const decryptedText = encryptKey.map((element) => {
-		return textAreaInput.value.includes(element)
-			? encryptKey[element]
-			: textAreaInput.value;
+	let decryptedText = textAreaInput.value;
+	Object.keys(encryptKey).forEach((key) => {
+		const regex = new RegExp(encryptKey[key], "g");
+		decryptedText = decryptedText.replace(regex, key);
 	});
-	textAreaResult.value = decryptedText;
+	textOutput.style.display = "none";
+	btnCopy.style.display = "block";
+	textAreaResult.innerText = decryptedText;
+});
+
+btnCopy.addEventListener("click", () => {
+	navigator.clipboard.writeText(textAreaResult.innerText);
 });
 
 textAreaInput.addEventListener("keyup", () => {
