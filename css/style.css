@@ -40,7 +40,7 @@ body{
   line-height: 150%; /* 36px */
 }
 
-.img-múneco{
+.img-muneco{
   width: 304px;
   height: 336px;
   flex-shrink: 0;
@@ -145,6 +145,12 @@ body{
   font-weight: 400;
   line-height: normal;
 }
+.contact-icons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
 
 .text-input-result{
   display: flex;
@@ -171,4 +177,64 @@ body{
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+@media screen and (max-width: 1023px){
+  .container{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .first-container{
+    width: 100%;
+  }
+  .title{
+    display: none;
+  }
+  .text-output-container{
+    width: 70%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .text-output{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+  .text-output-result{
+    width: 100%;
+  }
+  .btn-copy{
+    width: 100%;
+  }
+  .img-muneco{
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 480px){
+  body{
+    width: 100%;
+  }
+  .first-container{
+    width: 70%;
+  }
+  .text-input{
+    width: 100%;
+  }
+  .btn-container{
+    flex-direction: column;
+    justify-content: center;
+  }
+  .btn-encrypt{
+    /* width: 100%; */
+  }
+  .btn-decrypt{
+    /* width: 100%; */
+  }
 }
